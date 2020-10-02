@@ -1,0 +1,189 @@
+Sub DataSummary():
+
+    For Each ws In Worksheets 'loop through each worksheet
+    
+    Dim sht As Worksheet
+    Set sht = ActiveSheet
+    
+    Dim LastRow As Long ' to get the number of rows
+    LastRow = sht.Cells(sht.Rows.Count, "A").End(xlUp).Row
+    
+    Dim volume As Double
+    volume = 0
+    
+    Dim yearly_change As Double
+    yearly_change = 0
+    
+    Dim percent_change As Double
+    percent_change = 0
+    
+    Dim k As Integer 'row number for data summary table
+    k = 1
+    
+    Dim FirstDay_Open As Double
+    Dim LastDay_Close As Double
+    Dim FirstDay As Long
+    Dim LastDay As Long
+    Dim First As Long
+    Dim Last As Long
+    First = 2
+    FirstDay = ws.Cells(2, 2).Value
+    LastDay = ws.Cells(3, 2).Value
+    
+    'Data Summary Table Headings
+    ws.Range("K1").Value = "Ticker"
+    ws.Range("L1").Value = "Yearly Change"
+    ws.Range("M1").Value = "Percent Change"
+    ws.Range("N1").Value = "Volume"
+
+    ws.Range("K1:N1").Font.Bold = True
+    
+    'MsgBox (LastRow)
+    
+    Dim Ticker As String
+    Ticker = ws.Cells(2, 1).Value
+    
+    For i = 2 To LastRow ' for loop to read through all the data
+        
+        'if ticker value changes
+        
+        If (ws.Cells(i, 1).Value <> Ticker) Then
+                  
+            'data summary compilation
+            k = k + 1
+            FirstDay_Open = ws.Range("C" & First).Value
+            LastDay_Close = ws.Range("F" & Last).Value
+            yearly_change = LastDay_Close - FirstDay_Open
+            
+            ' if FirstDay_Open = 0, then just set percent_change = 0
+            If FirstDay_Open = 0 Then
+            percent_change = 0
+            Else
+            percent_change = yearly_change / FirstDay_Open
+            End If
+            
+            ws.Cells(k, 11).Value = Ticker
+            ws.Cells(k, 12).Value = yearly_change
+            ws.Cells(k, 13).Value = percent_change
+            ws.Cells(k, 14).Value = volume
+            
+            ' reset values
+            yearly_change = 0
+            percent_change = 0
+            volume = ws.Cells(i, 7).Value
+            Ticker = ws.Cells(i, 1).Value
+            FirstDay = ws.Cells(i, 2).Value
+            First = i
+            LastDay = 0
+        
+        'if it's still the same ticker
+        
+        Else
+           volume = volume + ws.Cells(i, 7).Value
+           
+           'for dates (to get the first day date and last day date
+           If ws.Cells(i, 2).Value <= FirstDay Then
+            First = i
+            FirstDay = ws.Cells(i, 2).Value
+           
+           ElseIf ws.Cells(i, 2).Value > LastDay Then
+            LastDay = ws.Cells(i, 2).Value
+            Last = i
+           
+           End If
+                                
+        End If
+        
+    Next i
+    
+    ' formatting for data table summary
+    ws.Range("M:M").NumberFormat = "0.00%"
+    ws.Range("L:L").Style = "Currency"
+
+    'MsgBox (k)
+    
+    ' conditional formatting
+    For j = 2 To k
+        If ws.Cells(j, 12).Value < 0 Then
+            ws.Range("L" & j).Interior.Color = vbRed ' less than 0, red highlight
+        ElseIf ws.Cells(j, 12).Value > 0 Then
+            ws.Range("L" & j).Interior.Color = vbGreen ' greater than 0, green highlight
+        End If
+    Next j
+    
+    ' stock comparison
+    
+    ' data summary table headings
+    ws.Range("Q1").Value = "Ticker"
+    ws.Range("R1").Value = "Value"
+    ws.Range("P2").Value = "Greatest % Increase"
+    ws.Range("P3").Value = "Greatest % Decrease"
+    ws.Range("P4").Value = "Greatest Total Volume"
+    
+    ws.Range("P2:P4").Font.Bold = True
+    ws.Range("Q1:R1").Font.Bold = True
+    
+    ' greatest increase and decrease
+    Dim LastRows2 As Long
+    lastrow2 = sht.Cells(sht.Rows.Count, "M").End(xlUp).Row 'getting number of rows in data summary table
+
+ 
+    Dim Max As Double
+    Max = ws.Cells(2, 13).Value ' greatest increase
+    
+    Dim Min As Double
+    Min = ws.Cells(2, 13).Value ' greatest decrease
+    
+    Dim MaxTicker As String
+    Dim MinTicker As String
+    MaxTicker = ws.Cells(2, 11).Value
+    MinTicker = ws.Cells(2, 11).Value
+ 
+    For x = 2 To lastrow2
+        
+       If ws.Cells(x, 13).Value > Max Then
+            Max = ws.Cells(x, 13).Value
+            MaxTicker = ws.Cells(x, 11).Value
+        ElseIf ws.Cells(x, 13).Value < Min Then
+            Min = ws.Cells(x, 13).Value
+            MinTicker = ws.Cells(x, 11).Value
+        End If
+        
+    Next x
+    
+    ' data summary compilation
+    ws.Range("Q2").Value = MaxTicker
+    ws.Range("R2").Value = Max
+    
+    ws.Range("Q3").Value = MinTicker
+    ws.Range("R3").Value = Min
+    
+    ws.Range("R2:R3").NumberFormat = "0.00%"
+    
+    
+    ' greatest total volume
+    Dim Vol As String
+    Vol = ws.Cells(2, 11).Value
+    
+    Dim Greatest As Double
+    Greatest = ws.Cells(2, 14).Value
+    
+    For y = 2 To lastrow2
+        
+       If ws.Cells(x, 13).Value > Greatest Then
+            Vol = ws.Cells(x, 13).Value
+            Greatest = ws.Cells(x, 11).Value
+        End If
+    
+    ' data summary compilation
+    ws.Range("Q4").Value = Vol
+    ws.Range("R4").Value = Greatest
+    
+    Next y
+
+    
+    Next ws
+
+
+End Sub
+

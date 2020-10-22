@@ -1,6 +1,6 @@
 # databootcamp
 
-Completed (please see folders): /n
+Completed (please see folders): 
 Excel Challenge
 VBA Challenge 
 Python Challenge 

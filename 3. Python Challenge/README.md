@@ -4,6 +4,8 @@ Challenge completed on: October 15, 2020
 
 Two python scripts have been written to: 1. Calculate election data and tally each vote (PyPoll) and 2. Analyze financial records of a company to output a summary of profit/losses (PyBank). 
 
+*If you are running the code, please make sure your file directory is within each folder (PyPoll or PyBank specifically).* 
+
 ## PyPoll
 
 Raw data was provided as such: 

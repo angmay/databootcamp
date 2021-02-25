@@ -6,7 +6,7 @@ Using Python and SQLAlchemy, a climate analysis and data exploration of a climat
 
 In addition, a Flask API was designed based on the various queries. 
 
-* If you are running the code, please make sure database is open * 
+*If you are running the code, please make sure database is open* 
 
 
 ## SQLAlchemy Connection

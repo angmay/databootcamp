@@ -3,6 +3,7 @@ import csv
 
 # Opening csv file and reader 
 filepath = os.path.join ("Resources", "election_data.csv")
+print(filepath)
 
 total_votes = 0 #Placeholder for total number of votes
 candidates = [] #Placeholder for candidate names 

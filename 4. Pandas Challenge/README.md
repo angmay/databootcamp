@@ -1,4 +1,4 @@
-# Pandas Homework - Pandas, Pandas, Pandas
+Challenge completed on: October 22, 2020
 
 ## Background
 
@@ -8,7 +8,7 @@ Using the Pandas library in Python, this script extracts raw data from csv files
 
 With a collection of school data, which includes their `Budget`, `Size`, and `Type` (District or Charter), as well as data on student's math and reading scores, the following analysis explores relationships between various factors. 
 
-###Conclusions
+##Conclusions
 
 * District schools have higher math and reading averages, as well as more students pass these subjects in District schools (in comparison to Charter schools). Math scores have the greatest diffference and math program need to be reveiwed in district type schools.
 

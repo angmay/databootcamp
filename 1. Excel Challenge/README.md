@@ -10,7 +10,7 @@ Getting funded on Kickstarter requires meeting or exceeding the project's initia
 
 *Noticeable trends included:*
 
-In the US and in the timeframe the data is in, theatre was a popular category for Kickstarter projects, but it was most likely to succeed in the music category (success rate of 77%). Journalism is also a hard category to follow through, as all 23 projects were canceled. 
+* In the US and in the timeframe the data is in, theatre was a popular category for Kickstarter projects, but it was most likely to succeed in the music category (success rate of 77%). Journalism is also a hard category to follow through, as all 23 projects were canceled. 
 
 ![Category in US](Images/Trend1.PNG)
 
@@ -37,9 +37,3 @@ In the US and in the timeframe the data is in, theatre was a popular category fo
 * Look into the relationship between `Project Success` and `Backers Count`. Although backers contribute different amounts, by analyzing the success rate (by count) versus the number of backers, we can evaluate if there are any relationships between these two variables. 
 
 * Look into the relationship between `Project Success` and `Staff Pick`. This will help to understand if staff picks have an influence in the project’s success. 
-
-  - clean code
-
-- - -
-
-© 2019 Trilogy Education Services

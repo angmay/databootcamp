@@ -9,7 +9,7 @@ Six CSV files were created to mimick the remains of a database of employees. In 
 
 To plan out how the database will be constructed, and ERD was created. 
 
-![ERD](Images/QuickDBD Schematics.png)
+![ERD](Images/QuickDBDSchematics.png)
 
 #### Data Engineering
 

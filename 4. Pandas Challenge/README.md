@@ -6,8 +6,6 @@ Using the Pandas library in Python, this script extracts raw data from csv files
 
 ## PyCitySchools
 
-![Education](Images/education.png)
-
 With a collection of school data, which includes their `Budget`, `Size`, and `Type` (District or Charter), as well as data on student's math and reading scores, the following analysis explores relationships between various factors. 
 
 ###Conclusions

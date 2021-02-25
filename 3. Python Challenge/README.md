@@ -2,7 +2,7 @@ Challenge completed on: October 15, 2020
 
 ## Background
 
-Two python scripts have been written to: 1. Calculate election data and count each candidate's votes (PyPoll) and 2. analyze financial records of a company to output a summary of profit/losses. 
+Two python scripts have been written to: 1. Calculate election data and tally each vote (PyPoll) and 2. Analyze financial records of a company to output a summary of profit/losses (PyBank). 
 
 ## PyPoll
 
@@ -10,7 +10,7 @@ Raw data was provided as such:
 
 ![Raw Data Snip](Images/PyPoll-rawdata.PNG)
 
-The script will output a text file of the results.
+The script will identify each unique candidate and output their number of votes. The script will output a text file of the results.
 
   ```text
   Election Results

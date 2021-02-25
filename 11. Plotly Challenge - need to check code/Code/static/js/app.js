@@ -2,7 +2,7 @@
 
 function optionList() {
 
-    d3.json("../data/samples.json").then(data=> {
+    d3.json("./data/samples.json").then(data=> {
         var listNames = data.names;
         //console.log(data);
         //console.log(listNames);
@@ -37,7 +37,7 @@ function optionChanged(subjectName){
 
 
     //reading in JSON file 
-    d3.json("../data/samples.json").then( function(data) {
+    d3.json("./data/samples.json").then( function(data) {
 
         //Reading all sample data
         var database = data["samples"]; 

@@ -33,7 +33,7 @@ The weather station with the highest number of observation was determined and a 
 
 ## Climate App
 
-a Flask API was created with the following routes in additon to the home page: 
+A Flask API was created with the following routes in additon to the home page: 
 
 * `/api/v1.0/precipitation` to return the `date` as the key and `prcp` as the value in JSON format
 

@@ -16,7 +16,7 @@ The data was combined into a single dataframe.
 
 It is as expected that as the city is closer to the equator, the weather is warmer. This is proven in the scatter plot below. 
 
-![Summary](Images/summary.png)
+![Summary](Images/summary1.png)
 
 No clear trend was observed in humidity of each city against its latitude. 
 

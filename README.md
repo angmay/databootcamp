@@ -1,7 +1,3 @@
-# databootcamp
+# databootcamp2
 
-Completed (please see folders): 
-Excel Challenge
-VBA Challenge 
-Python Challenge 
-Pandas Challenge - PySchool Analysis 
+SQL Employee Analysis

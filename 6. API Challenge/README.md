@@ -10,7 +10,7 @@ To accomplish this, latitude and longitude coordinates were extracted from the C
 
 The data was combined into a single dataframe. 
 
-![Dataframe](Images/data.png)
+![data](Images/data.png)
 
 ## Analysis on city latitude's influence on weather
 

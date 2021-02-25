@@ -7,6 +7,7 @@ Two python scripts have been written to: 1. Calculate election data and count ea
 ## PyPoll
 
 Raw data was provided as such: 
+
 ![Raw Data Snip](Images/PyPoll-rawdata.PNG)
 
 The script will output a text file of the results.
@@ -28,6 +29,7 @@ The script will output a text file of the results.
 ## PyBank
 
 Raw data was provided as such: 
+
 ![Raw Data Snip](Images/PyBank-rawdata.PNG)
 
 The script will output a text file of the results.

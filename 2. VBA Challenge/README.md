@@ -4,7 +4,7 @@ Challenge completed on: October 2, 2020
 
 ## Background
 
-To develop a VBA script that will analyze New York Stock Exchange data. Data was provided on each ticker's daily stats which inclues: `Open Price`, `High`, `Low`, `Closing Price`, and `Volume`. 
+To develop a VBA script that will analyze New York Stock Exchange data. Data was provided on each ticker's daily stats, which includes: `Opening Price`, `High`, `Low`, `Closing Price`, and `Volume`. 
 
 Example of the data: 
 
@@ -14,7 +14,7 @@ Example of the data:
 
 The VBA Macro will output the following: 
 
-Summary of each ticker's yearly change, percent change, and volume. Changes are also colour-coded. 
+Summary of each ticker's yearly change, percent change, and volume. Changes are also colour-coded for more ease in analysis. 
 
 ![Annual Summary](Images/Conclusion1.PNG)
 
